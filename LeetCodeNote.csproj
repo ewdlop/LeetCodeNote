@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>false</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<EnablePreviewFeatures>True</EnablePreviewFeatures>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Runtime.Experimental" Version="7.0.0-preview.2.22152.2" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeetCodeNote.Benchmark\**" />
+    <Compile Remove="LeetCodeNote.Test\**" />
+    <EmbeddedResource Remove="LeetCodeNote.Benchmark\**" />
+    <EmbeddedResource Remove="LeetCodeNote.Test\**" />
+    <None Remove="LeetCodeNote.Benchmark\**" />
+    <None Remove="LeetCodeNote.Test\**" />
+  </ItemGroup>
+
+</Project>
