@@ -17,9 +17,6 @@ public partial interface ISolution
         return (int)r;
     }
 }
-
-}
-
 public static partial class IntegerExtension
 {
     public static int ToSqrt(this int x)
