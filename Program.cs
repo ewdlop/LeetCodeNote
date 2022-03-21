@@ -4,5 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using LeetCodeNote;
 
-Console.WriteLine("Hi");
+int[] nums = new int[] { 2,3,2,3};
+
+nums.ToAllOccurrencesRemoved(3);

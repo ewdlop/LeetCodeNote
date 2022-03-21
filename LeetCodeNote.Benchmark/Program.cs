@@ -13,6 +13,4 @@ public class ISolution2
 
     [Benchmark]
     public void Test() => ISolution.Permute(data);
-    [Benchmark]
-    public void Tes2t() => ISolution.Permute2(data);
 }
