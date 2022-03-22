@@ -2,6 +2,12 @@
 
 public partial interface ISolution
 {
+    /// <summary>
+    /// https://leetcode.com/problems/rotate-list/
+    /// </summary>
+    /// <param name="head"></param>
+    /// <param name="k"></param>
+    /// <returns></returns>
     public ListNode RotateRight(ListNode head, int k)
     {
         if (head?.next is null) return head;
