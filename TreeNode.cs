@@ -8,6 +8,9 @@ namespace LeetCodeNote;
 
 public partial interface ISolution
 {
+    /// <summary>
+    /// The original implementation on LeetCode.
+    /// </summary>
     public class TreeNode
     {
         public int val;

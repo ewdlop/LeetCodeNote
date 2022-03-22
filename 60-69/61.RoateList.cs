@@ -35,11 +35,11 @@ public partial interface ISolution
         if (k % n == 0) return head;
         oldTail.Next = head;
         ListNodeCustom newTail = head;
-        for (int i = 0; i < n - k % n - 1; i++)
+        for (int i = 0; i < n - k % n - 1 && newTail.Next is not null; i++)
         {
             newTail = newTail.Next;
         }
-        ListNodeCustom? newHead = newTail?.Next;
+        ListNodeCustom? newHead = newTail.Next;
         newTail.Next = null;
         return newHead;
     }

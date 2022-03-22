@@ -4,7 +4,6 @@ public partial interface ISolution
 {
     /// <summary>
     /// The original implementation on LeetCode.
-    /// For Question 2, 21
     /// </summary>
     public class ListNode
     {
