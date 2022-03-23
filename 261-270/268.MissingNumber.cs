@@ -17,7 +17,7 @@ public partial interface ISolution
         return (int)sum;
     }
 
-    public int MissingNumberXOR(int[] nums)
+    public int MissingNumberInRangeXOR(int[] nums)
     {
         int missing = nums.Length;
         for (int i = 0; i < nums.Length; i++)
