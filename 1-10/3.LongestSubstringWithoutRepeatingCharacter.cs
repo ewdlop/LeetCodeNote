@@ -13,7 +13,7 @@ public partial interface ISolution
     {
         int result = 0;
         //sliding window
-        Span<int> cache = stackalloc int[256];
+        Span<int> cache = stackalloc int[128];
         for (int rightAnchor = 0, leftAnchor = 0; rightAnchor < s.Length; rightAnchor++)
         {
             leftAnchor = cache[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, cache[s[rightAnchor]]) : leftAnchor;
@@ -26,11 +26,11 @@ public partial interface ISolution
 
 public static partial class StringExtension
 {
-    public static int GetLengthOfLongestSubstring(this string s)
+    public static int LengthOfTheLongestSubstringWithoutRepeatingCharacters(this string s)
     {
         int result = 0;
         //sliding window
-        Span<int> cache = stackalloc int[256];
+        Span<int> cache = stackalloc int[128];
         for (int rightAnchor = 0, leftAnchor = 0; rightAnchor < s.Length; rightAnchor++)
         {
             leftAnchor = cache[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, cache[s[rightAnchor]]) : leftAnchor;
