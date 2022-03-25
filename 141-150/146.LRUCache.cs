@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace LeetCodeNote;
 
@@ -162,11 +163,26 @@ public class X
                $"{string.Join("", Enumerable.Repeat('z', l - 1))}";
     }
 
-    public string GetSmallestString(int n, int k)
+    //public string GetSmallestString(int n, int k)
+    //{
+    //    int l = (int)System.Math.Ceiling((k - n) / 25.0f);
+    //    return $"{string.Join("", Enumerable.Repeat('a', n - l)).AsSpan()}" +
+    //           $"{(char)(k - (n - l) - (l - 1) * 26 + 'a' - 1)}" +
+    //           $"{string.Join("", Enumerable.Repeat('z', l - 1))}";
+    //}
+
+    public string[] DivideString(string s, int k, char fill)
     {
-        int l = (int)System.Math.Ceiling((k - n) / 25.0f);
-        return $"{string.Join("", Enumerable.Repeat('a', n - l)).AsSpan()}" +
-               $"{(char)(k - (n - l) - (l - 1) * 26 + 'a' - 1)}" +
-               $"{string.Join("", Enumerable.Repeat('z', l - 1))}";
+        StringBuilder[] result = new StringBuilder[(s.Length + k - 1)/ k];
+        for (int i = 0; i < result.Length; i++)
+        {
+            result[i/k] = new StringBuilder(new string(fill, k));
+        }
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            result[i / k][i % k] = s[i];
+        }
+        return result.Select(r => r.ToString()).ToArray();
     }
 }

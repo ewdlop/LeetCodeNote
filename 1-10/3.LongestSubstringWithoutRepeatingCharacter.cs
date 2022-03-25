@@ -13,11 +13,11 @@ public partial interface ISolution
     {
         int result = 0;
         //sliding window
-        Span<int> cache = stackalloc int[128];
+        Span<int> seen = stackalloc int[128];
         for (int rightAnchor = 0, leftAnchor = 0; rightAnchor < s.Length; rightAnchor++)
         {
-            leftAnchor = cache[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, cache[s[rightAnchor]]) : leftAnchor;
-            cache[s[rightAnchor]] = rightAnchor + 1;
+            leftAnchor = seen[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, seen[s[rightAnchor]]) : leftAnchor;
+            seen[s[rightAnchor]] = rightAnchor + 1;
             result = Math.Max(result, rightAnchor - leftAnchor + 1);
         }
         return result;
@@ -30,11 +30,11 @@ public static partial class StringExtension
     {
         int result = 0;
         //sliding window
-        Span<int> cache = stackalloc int[128];
+        Span<int> seen = stackalloc int[128];
         for (int rightAnchor = 0, leftAnchor = 0; rightAnchor < s.Length; rightAnchor++)
         {
-            leftAnchor = cache[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, cache[s[rightAnchor]]) : leftAnchor;
-            cache[s[rightAnchor]] = rightAnchor + 1;
+            leftAnchor = seen[s[rightAnchor]] > 0 ? Math.Max(leftAnchor, seen[s[rightAnchor]]) : leftAnchor;
+            seen[s[rightAnchor]] = rightAnchor + 1;
             result = Math.Max(result, rightAnchor - leftAnchor + 1);
         }
         return result;
