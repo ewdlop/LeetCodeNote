@@ -31,16 +31,19 @@ public static partial class Solution
         {
             node.Previous = Head;
             node.Next = Head.Next;
-            Head.Next.Previous = node;
-            Head.Next = node;
+            if (Head.Next is not null)
+            {
+                Head.Next.Previous = node;
+                Head.Next = node;
+            }
         }
 
         private void RemoveNode(DoubleLinkedNode node)
         {
-            DoubleLinkedNode previous = node.Previous;
-            DoubleLinkedNode next = node.Next;
-            previous.Next = next;
-            next.Previous = previous;
+            DoubleLinkedNode? previous = node.Previous;
+            DoubleLinkedNode? next = node.Next;
+            if(previous is not null) previous.Next = next;
+            if(next is not null)next.Previous = previous;
         }
 
         private void MoveToHead(DoubleLinkedNode node)
@@ -150,39 +153,5 @@ public static partial class Solution
                 Cache.Add(key, newNode);
             }
         }
-    }
-}
-
-public class X
-{
-    public string GetSmallestString(int n, int k)
-    {
-        int l = (int)System.Math.Ceiling((k - n) / 25.0f);
-        return $"{string.Join("", Enumerable.Repeat('a', n - l)).AsSpan()}" +
-               $"{(char)(k - (n - l) - (l - 1) * 26 + 'a' - 1)}" +
-               $"{string.Join("", Enumerable.Repeat('z', l - 1))}";
-    }
-
-    //public string GetSmallestString(int n, int k)
-    //{
-    //    int l = (int)System.Math.Ceiling((k - n) / 25.0f);
-    //    return $"{string.Join("", Enumerable.Repeat('a', n - l)).AsSpan()}" +
-    //           $"{(char)(k - (n - l) - (l - 1) * 26 + 'a' - 1)}" +
-    //           $"{string.Join("", Enumerable.Repeat('z', l - 1))}";
-    //}
-
-    public string[] DivideString(string s, int k, char fill)
-    {
-        StringBuilder[] result = new StringBuilder[(s.Length + k - 1)/ k];
-        for (int i = 0; i < result.Length; i++)
-        {
-            result[i/k] = new StringBuilder(new string(fill, k));
-        }
-
-        for (int i = 0; i < s.Length; i++)
-        {
-            result[i / k][i % k] = s[i];
-        }
-        return result.Select(r => r.ToString()).ToArray();
     }
 }

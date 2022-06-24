@@ -33,8 +33,6 @@ public static partial class Solution
 				{
 					result.Add(new List<int> { nums[first], nums[second], nums[third] });
 				}
-
-				string x = "".AsSpan();
 			}
 		}
 		return result;
