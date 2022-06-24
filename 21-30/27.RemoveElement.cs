@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/remove-element/
@@ -10,7 +10,7 @@ public partial interface ISolution
     /// <param name="nums"></param>
     /// <param name="val"></param>
     /// <returns></returns>
-    public int RemoveElement(int[] nums, int val)
+    public static int RemoveElement(int[] nums, int val)
     {
         int begin = 0;
         for (int i = 0; i < nums.Length; i++)

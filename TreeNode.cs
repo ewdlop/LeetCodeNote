@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// The original implementation on LeetCode.

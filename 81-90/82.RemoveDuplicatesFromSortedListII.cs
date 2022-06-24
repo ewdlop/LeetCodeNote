@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public ListNode DeleteDuplicates(ListNode head)
+    public static ListNode DeleteDuplicates(ListNode head)
     {
         if (head?.next is null) return head;
         ListNode current = head;
@@ -39,7 +39,7 @@ public partial interface ISolution
         return head;
     }
 
-    public ListNodeCustom? DeleteDuplicatesFromSortedLinkedList(ListNodeCustom? head)
+    public static ListNodeCustom? DeleteDuplicatesFromSortedLinkedList(ListNodeCustom? head)
     {
         if (head?.Next is null) return head;
         ListNodeCustom? current = head;

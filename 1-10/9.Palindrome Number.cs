@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/palindrome-number

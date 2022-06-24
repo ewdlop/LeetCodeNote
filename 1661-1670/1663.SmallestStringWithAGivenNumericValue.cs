@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public string GetSmallestString(int n, int k)
+    public static string GetSmallestString(int n, int k)
     {
         //Span<char> x = stackalloc char[n];
         ////x.Fill('a');

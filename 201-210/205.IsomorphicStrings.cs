@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/isomorphic-strings/
@@ -10,7 +10,7 @@ public partial interface ISolution
     /// <param name="s"></param>
     /// <param name="t"></param>
     /// <returns></returns>
-    public bool IsIsomorphic(string s, string t)
+    public static bool IsIsomorphic(string s, string t)
     {
         Span<int> encodedS = stackalloc int[256];
         Span<int> encodedT = stackalloc int[256];

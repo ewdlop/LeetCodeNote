@@ -1,13 +1,13 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/reverse-linked-list/submissions/
     /// </summary>
     /// <param name="head"></param>
     /// <returns></returns>
-    public ListNode ReverseList(ListNode head)
+    public static ListNode ReverseList(ListNode head)
     {
         ListNode previous = null;
         ListNode current = head;
@@ -22,7 +22,7 @@ public partial interface ISolution
         return previous;
     }
 
-    public ListNodeCustom? ReverseLinkedList(ListNodeCustom? head)
+    public static ListNodeCustom? ReverseLinkedList(ListNodeCustom? head)
     {
         ListNodeCustom? previous = null;
         ListNodeCustom? current = head;

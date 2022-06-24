@@ -3,18 +3,15 @@ using System.Collections.Generic;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
 
     public class PriceComparer : IComparer<int[]>
     {
-        int IComparer<int[]>.Compare(int[] o1, int[] o2)
-        {
-            return o1[0] - o1[1] - (o2[0] - o2[1]);
-        }
+        int IComparer<int[]>.Compare(int[]? o1, int[]? o2) => o1[0] - o1[1] - (o2[0] - o2[1]);
     }
 
-    public int TwoCitySchedCost(int[][] costs)
+    public static int TwoCitySchedCost(int[][] costs)
     {
         Array.Sort(costs, new PriceComparer());
         int total = 0;

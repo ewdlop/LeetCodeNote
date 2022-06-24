@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public int NumRescueBoats(int[] people, int limit)
+    public static int NumRescueBoats(int[] people, int limit)
     {
         Array.Sort(people);
         int i = 0, j = people.Length - 1;
@@ -26,7 +26,7 @@ public partial interface ISolution
         return ans;
     }
 
-    public int NumberOfRescueBoats(ref int[] people, int limit, bool isSorted = false)
+    public static int NumberOfRescueBoats(ref int[] people, int limit, bool isSorted = false)
     {
         if(!isSorted)Array.Sort(people);
         int i = 0, j = people.Length - 1;
@@ -42,7 +42,7 @@ public partial interface ISolution
 
         return ans;
     }
-    public int NumberOfRescueBoats(int[] people, int limit, bool isSorted = false)
+    public static int NumberOfRescueBoats(int[] people, int limit, bool isSorted = false)
     {
         int i = 0, j = people.Length - 1;
         int ans = 0;

@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public bool HasCycle(ListNode head)
+    public static bool HasCycle(ListNode head)
     {
         if (head is null) return false;
         ListNode slow = head;
@@ -19,7 +19,7 @@ public partial interface ISolution
         return true;
     }
 
-    public bool HasCycle(ListNodeCustom? head)
+    public static bool HasCycle(ListNodeCustom? head)
     {
         if (head is null) return false;
         ListNodeCustom? slow = head;

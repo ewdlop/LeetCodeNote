@@ -2,9 +2,9 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public int MaxSubArray(int[] nums)
+    public static int MaxSubArray(int[] nums)
     {
         int maxEndingHere = nums[0];
         int maxSoFar = nums[0];

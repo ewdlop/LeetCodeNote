@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/rotate-list/
@@ -8,7 +8,7 @@ public partial interface ISolution
     /// <param name="head"></param>
     /// <param name="k"></param>
     /// <returns></returns>
-    public ListNode RotateRight(ListNode head, int k)
+    public static ListNode RotateRight(ListNode head, int k)
     {
         if (head?.next is null) return head;
         ListNode oldTail = head;
@@ -29,7 +29,7 @@ public partial interface ISolution
         return newHead;
     }
 
-    public ListNodeCustom? RotateRight(ListNodeCustom? head, int k)
+    public static ListNodeCustom? RotateRight(ListNodeCustom? head, int k)
     {
         if (head?.Next is null) return head;
         ListNodeCustom oldTail = head;

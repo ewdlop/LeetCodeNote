@@ -2,9 +2,9 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public int MinCostClimbingStairs(int[] cost)
+    public static int MinCostClimbingStairs(int[] cost)
     {
         (int n, int first, int second) = (cost.Length, cost[0], cost[1]);
         if (n <= 2) return Math.Min(first, second);

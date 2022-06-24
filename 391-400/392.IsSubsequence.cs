@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/is-subsequence/
@@ -8,7 +8,7 @@ public partial interface ISolution
     /// <param name="s"></param>
     /// <param name="t"></param>
     /// <returns></returns>
-    public bool IsSubsequence(string s, string t)
+    public static bool IsSubsequence(string s, string t)
     {
         if (s.Length == 0) return true;
         int anchor = 0;
@@ -20,7 +20,7 @@ public partial interface ISolution
         return false;
     }
 
-    public bool IsSubsequence2(string given, string s)
+    public static bool IsSubsequence2(string given, string s)
     {
         if (s.Length == 0) return true;
         int anchor = 0;

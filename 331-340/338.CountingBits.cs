@@ -1,13 +1,13 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/counting-bits/
     /// </summary>
     /// <param name="n"></param>
     /// <returns></returns>
-    public int[] CountBits(int n)
+    public static int[] CountBits(int n)
     {
         int[] counts = new int[n + 1];
         for (int i = 1; i <= n; i++)
@@ -17,7 +17,7 @@ public partial interface ISolution
         return counts;
     }
 
-    public int[] Count1BitsInRange(int n)
+    public static int[] Count1BitsInRange(int n)
     {
         int[] counts = new int[n + 1];
         for (int i = 1; i <= n; i++)

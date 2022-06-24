@@ -3,9 +3,9 @@ using System.Text;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public string RemoveDuplicateLetters(string s)
+    public static string RemoveDuplicateLetters(string s)
     {
         Stack<char> stack = new();
         HashSet<char> seen = new();

@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public void Rotate(int[][] matrix)
+    public static void Rotate(int[][] matrix)
     {
         int n = matrix.Length;
         for (int i = 0; i < (n + 1) / 2; i++)
@@ -18,7 +18,7 @@ public partial interface ISolution
         }
     }
 
-    public void RotateBy90Degree(int[][] matrix)
+    public static void RotateBy90Degree(int[][] matrix)
     {
         int n = matrix.Length;
         for (int i = 0; i < (n + 1) / 2; i++)

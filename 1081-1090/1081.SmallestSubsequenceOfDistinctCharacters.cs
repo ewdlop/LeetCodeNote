@@ -3,9 +3,9 @@ using System.Text;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public string SmallestSubsequence(string s)
+    public static string SmallestSubsequence(string s)
     {
         Stack<char> stack = new();
         HashSet<char> seen = new();

@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public int NumberOfArithmeticSlices(int[] nums)
+    public static int NumberOfArithmeticSlices(int[] nums)
     {
         int current = 0;
         int total = 0;
@@ -20,7 +20,7 @@ public partial interface ISolution
         return total;
     }
 
-    public (bool IsArithmetic, int count) HasArithmeticSlices(int[] nums)
+    public static (bool IsArithmetic, int count) HasArithmeticSlices(int[] nums)
     {
         int current = 0;
         int total = 0;

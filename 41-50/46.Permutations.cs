@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     public static IList<IList<int>> Permute(int[] nums)
     {

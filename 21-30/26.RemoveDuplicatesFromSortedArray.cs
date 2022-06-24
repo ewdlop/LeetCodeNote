@@ -2,14 +2,14 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
     /// </summary>
     /// <param name="nums"></param>
     /// <returns></returns>
-    public int RemoveDuplicates(int[] nums)
+    public static int RemoveDuplicates(int[] nums)
     {
         int duplicateCount = 0;
         for (int i = 1; i < nums.Length; i++)

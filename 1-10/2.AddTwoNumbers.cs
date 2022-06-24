@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/add-two-numbers
@@ -10,7 +10,7 @@ public partial interface ISolution
     /// <param name="l1"></param>
     /// <param name="l2"></param>
     /// <returns></returns>
-    public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+    public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
         ListNode head = new ListNode(0);
         ListNode current = head;
@@ -30,7 +30,7 @@ public partial interface ISolution
         }
         return head.next;
     }
-    public ListNodeCustom? AddTwoNumbers(ListNodeCustom? l1, ListNodeCustom? l2)
+    public static ListNodeCustom? AddTwoNumbers(ListNodeCustom? l1, ListNodeCustom? l2)
     {
         ListNodeCustom head = new ListNodeCustom();
         ListNodeCustom current = head;

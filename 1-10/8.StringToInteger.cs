@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public int MyAtoi(string s)
+    public static int MyAtoi(string s)
     {
         if (s is null || s == string.Empty)return 0;
 

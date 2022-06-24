@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/champagne-tower/
@@ -9,7 +9,7 @@ public partial interface ISolution
     /// <param name="query_row"></param>
     /// <param name="query_glass"></param>
     /// <returns></returns>
-    public double ChampagneTower(int poured, int query_row, int query_glass)
+    public static double ChampagneTower(int poured, int query_row, int query_glass)
     {
         double[,] result = new double[101, 101];
         result[0, 0] = poured;

@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/

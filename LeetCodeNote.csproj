@@ -16,4 +16,14 @@
     <None Remove="LeetCodeNote.Test\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="11-20\15.3Sum.cs" />
+    <Compile Remove="2131-2140\2235.AddTwoIntegers.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="11-20\15.3Sum.cs" />
+    <None Include="2131-2140\2235.AddTwoIntegers.cs" />
+  </ItemGroup>
+
 </Project>

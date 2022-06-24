@@ -6,9 +6,9 @@ using System.Text;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public string[] DivideString(string s, int k, char fill)
+    public static string[] DivideString(string s, int k, char fill)
     {
         StringBuilder[] result = new StringBuilder[(s.Length + k - 1) / k];
         for (int i = 0; i < result.Length; i++)

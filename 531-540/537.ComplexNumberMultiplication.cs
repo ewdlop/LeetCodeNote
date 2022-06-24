@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/complex-number-multiplication/
@@ -10,7 +10,7 @@ public partial interface ISolution
     /// <param name="num1"></param>
     /// <param name="num2"></param>
     /// <returns></returns>
-    public string ComplexNumberMultiply(string num1, string num2)
+    public static string ComplexNumberMultiply(string num1, string num2)
     {
         string[] newa = num1.Split("+");
         string[] newb = num2.Split("+");

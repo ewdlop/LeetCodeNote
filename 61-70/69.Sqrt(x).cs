@@ -1,13 +1,13 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/sqrtx/. Newton's method
     /// </summary>
     /// <param name="x"></param>
     /// <returns></returns>
-    public int MySqrt(int x)
+    public static int MySqrt(int x)
     {
         long r = x;
         while (r * r > x) //convergence criteria

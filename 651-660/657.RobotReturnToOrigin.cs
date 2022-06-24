@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public bool JudgeCircle(string moves)
+    public static bool JudgeCircle(string moves)
     {
         (int x, int y) = (0, 0);
         foreach (char ch in moves)
@@ -26,7 +26,7 @@ public partial interface ISolution
         return (x, y) == (0, 0);
     }
 
-    public bool ReturnToOrigin(string moves)
+    public static bool ReturnToOrigin(string moves)
     {
         (int x, int y) = (0, 0);
         foreach (char ch in moves)

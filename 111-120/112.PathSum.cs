@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public bool HasPathSum(TreeNode root, int targetSum)
+    public static bool HasPathSum(TreeNode root, int targetSum)
     {
         if (root is null)
         {
@@ -16,7 +16,7 @@ public partial interface ISolution
 
         return HasPathSum(root.left, targetSum - root.val) || HasPathSum(root.right, targetSum - root.val);
     }
-    public bool HasPathSum(TreeNodeCustom? root, int targetSum) =>
+    public static bool HasPathSum(TreeNodeCustom? root, int targetSum) =>
         root is not null && (targetSum - root.Value == 0 && root.Left is null && root.Right is null ||
                              HasPathSum(root.Left, targetSum - root.Value) ||
                              HasPathSum(root.Right, targetSum - root.Value));

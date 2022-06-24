@@ -1,13 +1,13 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// Not Manacher's Algorithm
     /// </summary>
     /// <param name="s"></param>
     /// <returns></returns>
-    public string LongestPalindrome(string s)
+    public static string LongestPalindrome(string s)
     {
         int sLength = s.Length;
         if (sLength < 2) return s;

@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public double Pow(double x, int n) =>
+    public static double Pow(double x, int n) =>
         n switch
         {
             0 => 1,

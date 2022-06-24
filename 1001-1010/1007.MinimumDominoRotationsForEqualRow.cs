@@ -2,7 +2,7 @@
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
@@ -10,7 +10,7 @@ public partial interface ISolution
     /// <param name="top"></param>
     /// <param name="bottom"></param>
     /// <returns></returns>
-    public int MinDominoRotations(int[] top, int[] bottom)
+    public static int MinDominoRotations(int[] top, int[] bottom)
     {
         int[] countA = new int[7], countB = new int[7], same = new int[7];
         int n = top.Length;
@@ -32,7 +32,7 @@ public partial interface ISolution
         return -1;
     }
 
-    public (bool possible, int? move) IsMinDominoRotationsPossible(int[] top, int[] bottom)
+    public static  (bool possible, int? move) IsMinDominoRotationsPossible(int[] top, int[] bottom)
     {
         int[] countA = new int[7], countB = new int[7], same = new int[7];
         int n = top.Length;

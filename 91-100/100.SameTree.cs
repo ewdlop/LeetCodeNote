@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public bool IsSameTree(TreeNode p, TreeNode q)
+    public static bool IsSameTree(TreeNode p, TreeNode q)
     {
         if (p is not null && q is not null)
         {
@@ -12,7 +12,7 @@ public partial interface ISolution
         return p is null && q is null;
     }
 
-    public bool IsSameTree(TreeNodeCustom? p, TreeNodeCustom? q) =>
+    public static bool IsSameTree(TreeNodeCustom? p, TreeNodeCustom? q) =>
         p is not null && q is not null
             ? p.Value == q.Value && IsSameTree(p.Left, q.Left) && IsSameTree(p.Right, q.Right)
             : p is null && q is null;

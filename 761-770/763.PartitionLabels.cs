@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/partition-labels/
     /// </summary>
     /// <param name="s"></param>
     /// <returns></returns>
-    public IList<int> PartitionLabels(string s)
+    public static IList<int> PartitionLabels(string s)
     {
         Span<int> lastPlaceOfOccurrenceForLetter = stackalloc int[26];
         for (int i = 0; i < s.Length; ++i)

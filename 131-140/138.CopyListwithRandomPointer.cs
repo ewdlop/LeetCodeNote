@@ -1,8 +1,8 @@
 ﻿namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
-    public Node CopyRandomList(Node head)
+    public static Node CopyRandomList(Node head)
     {
         if (head is null) return head;
         Node current = head;
@@ -33,7 +33,7 @@ public partial interface ISolution
         return newHead;
     }
 
-    public NodeWithRandomNodePointer? CopyRandomList(NodeWithRandomNodePointer? head)
+    public static NodeWithRandomNodePointer? CopyRandomList(NodeWithRandomNodePointer? head)
     {
         if (head is null) return head;
         NodeWithRandomNodePointer? current = head;

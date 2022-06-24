@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace LeetCodeNote;
 
-public partial interface ISolution
+public static partial class Solution
 {
     /// <summary>
     /// https://leetcode.com/problems/generate-parentheses/m
@@ -11,7 +11,7 @@ public partial interface ISolution
     /// </summary>
     /// <param name="n"></param>
     /// <returns></returns>
-    public IList<string> GenerateParenthesis(int n)
+    public static IList<string> GenerateParenthesis(int n)
     {
         List<string> result = new();
         if (n == 0)
