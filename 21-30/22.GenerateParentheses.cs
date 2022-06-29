@@ -22,8 +22,8 @@ public static partial class Solution
         {
             for (int i = 0; i < n; i++)
             {
-                var list = GenerateParenthesis(i);
-                for (var index = 0; index < list.Count; index++)
+                IList<string> list = GenerateParenthesis(i);
+                for (int index = 0; index < list.Count; index++)
                 {
                     string left = list[index];
                     foreach (string right in GenerateParenthesis(n - 1 - i))

@@ -26,6 +26,30 @@ public static partial class Solution
         return (x, y) == (0, 0);
     }
 
+    public static bool JudgeCircle2(string moves)
+    {
+        (int x, int y) = (0, 0);
+        for(int i = 0; i < moves.Length; i++)
+        {
+            switch (moves[i])
+            {
+                case 'U':
+                    y++;
+                    break;
+                case 'D':
+                    y--;
+                    break;
+                case 'R':
+                    x++;
+                    break;
+                case 'L':
+                    x--;
+                    break;
+            }
+        }
+        return (x, y) == (0, 0);
+    }
+
     public static bool ReturnToOrigin(string moves)
     {
         (int x, int y) = (0, 0);
