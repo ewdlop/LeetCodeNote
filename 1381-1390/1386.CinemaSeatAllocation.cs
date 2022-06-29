@@ -20,8 +20,8 @@ public static partial class Solution
             int reserved = graph[key];
             int count = 0;
             if((reserved & 60) ==0) count++;
-            if ((reserved & 240) == 0 && count == 0) count = 1;
             if((reserved & 960) == 0) count++;
+            if ((reserved & 240) == 0 && count == 0) count = 1;
             max += count;
         }
         return max + 2 * (n - graph.Count);
