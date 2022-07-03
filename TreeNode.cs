@@ -30,4 +30,18 @@ public static partial class Solution
         public TreeNodeCustom? Left { get; set; }
         public TreeNodeCustom? Right { get; set; }
     }
+
+    public class TreeInfo
+    {
+        public int Height { get; set; }
+
+        public TreeInfo(int height, bool balanced)
+        {
+            Height = height;
+            Balanced = balanced;
+        }
+
+        public bool Balanced { get; set; }
+
+    }
 }
