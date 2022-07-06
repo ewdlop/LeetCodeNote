@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LeetCodeNote;
 
 public static partial class Solution
 {
-    public static TreeNode? BalanceBST(TreeNode root)
+    public static TreeNode BalanceBST(TreeNode root)
     {
         if (root.left is null && root.right is null) return root;
         List<TreeNode> sortedList = new List<TreeNode>();
@@ -21,7 +22,7 @@ public static partial class Solution
         InOrder(root.right, ref sortedList);
     }
 
-    public static TreeNode? BuildBST(List<TreeNode> sortedList, int start, int end)
+    public static TreeNode BuildBST(List<TreeNode> sortedList, int start, int end)
     {
         if (start > end) return null;
         int mid = (start + end) / 2;

@@ -7,8 +7,10 @@ public static partial class Solution
     public static IList<string> FizzBuzz(int n)
     {
         IList<string> result = new List<string>(n);
-        for (int i = 1, fizz = 0, buzz = 0; i <= n; (i, fizz, buzz)=(i++, fizz++, buzz++))
+        for (int i = 1, fizz = 0, buzz = 0; i <= n; i++)
         {
+            fizz++;
+            buzz++;
             if (fizz == 3 && buzz == 5)
             {
                 result.Add("FizzBuzz");
