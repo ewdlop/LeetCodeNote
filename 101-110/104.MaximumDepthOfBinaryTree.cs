@@ -4,7 +4,7 @@ namespace LeetCodeNote;
 
 public static partial class Solution
 {
-    public int MaxDepth(TreeNode root)
+    public static int MaxDepth(TreeNode root)
     {
         if (root == null) return 0;
 
