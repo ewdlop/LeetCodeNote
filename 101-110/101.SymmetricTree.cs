@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace LeetCodeNote;
+﻿namespace LeetCodeNote;
 
 public static partial class Solution
 {
@@ -34,5 +27,3 @@ public static partial class Solution
 
     }
 }
-
- ? true : false;
